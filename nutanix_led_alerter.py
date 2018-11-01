@@ -1,10 +1,12 @@
 from flux_led import WifiLedBulb
+import time
 
 ip_address = "10.0.3.9"
 
-leds = flux_led.WifiLedBulb(ip_address)
+led = WifiLedBulb(ip_address)
 
-while true:
+while True:
     led.turnOn()
-    wait 10
+    time.sleep(10)
     led.turnOff()
+    time.sleep(10)

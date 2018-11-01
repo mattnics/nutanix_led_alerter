@@ -13,6 +13,6 @@ ADD . /app
 
 # Using pip:
 RUN python3 -m pip install -r requirements.txt
-CMD "/bin/sh"
-#CMD ["python3", "-m", "nutanix_led_alerter"]
+#CMD "/bin/sh"
+CMD ["python3", "-m", "nutanix_led_alerter.py"]
 
