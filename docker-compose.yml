@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  nutanix_led_alerter:
+    image: nutanix_led_alerter
+    build: .
+    ports:
+      - 3000:3000
