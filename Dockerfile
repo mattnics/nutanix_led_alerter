@@ -5,9 +5,6 @@
 # tags from Docker Hub.
 FROM python:alpine
 
-# If you prefer miniconda:
-#FROM continuumio/miniconda3
-
 LABEL Name=nutanix_led_alerter Version=0.0.1
 EXPOSE 3000
 
@@ -18,11 +15,4 @@ ADD . /app
 RUN python3 -m pip install -r requirements.txt
 CMD ["python3", "-m", "nutanix_led_alerter"]
 
-# Using pipenv:
-#RUN python3 -m pip install pipenv
-#RUN pipenv install --ignore-pipfile
-#CMD ["pipenv", "run", "python3", "-m", "nutanix_led_alerter"]
 
-# Using miniconda (make sure to replace 'myenv' w/ your environment name):
-#RUN conda env create -f environment.yml
-#CMD /bin/bash -c "source activate myenv && python3 -m nutanix_led_alerter"
